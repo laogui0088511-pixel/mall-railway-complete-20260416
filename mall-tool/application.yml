@@ -1,0 +1,13 @@
+server:
+  port: ${PORT:8010}
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://127.0.0.1:3306/mall?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8}
+    username: ${SPRING_DATASOURCE_USERNAME:mall}
+    password: ${SPRING_DATASOURCE_PASSWORD:Bi8SNdxskwpTcGmd}
+
+mall:
+  redis:
+    host: ${MALL_REDIS_HOST:${REDIS_URL:redis://127.0.0.1:6379}}
+    password: ${MALL_REDIS_PASSWORD:${REDIS_PASSWORD:}}
