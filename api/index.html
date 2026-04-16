@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,height=device-height,initial-scale=1,viewport-fit=cover">
+    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+    <title>shop</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script defer="defer" type="module" src="./js/chunk-vendors.42ec14ec.js"></script>
+    <script defer="defer" type="module" src="./js/app.33bf423c.js"></script>
+    <link href="./css/chunk-vendors.8ac7a150.css" rel="stylesheet">
+    <link href="./css/app.0418fb43.css" rel="stylesheet">
+    <style>
+        /* Hide footer parts: logo+subscription, 客户服务, 用户中心, 支付方式 */
+        .footer .footer-title {
+            display: none !important;
+        }
+
+        .footer-nav>.footer-nav-item:nth-child(1) {
+            display: none !important;
+        }
+
+        .footer-nav>.footer-nav-item:nth-child(3) {
+            display: none !important;
+        }
+
+        .footer .sec {
+            display: none !important;
+        }
+
+        .footer .payment {
+            display: none !important;
+        }
+
+        /* Make remaining 2 columns side by side */
+        .footer-nav {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            justify-content: space-around !important;
+        }
+
+        .footer-nav>.footer-nav-item:nth-child(2),
+        .footer-nav>.footer-nav-item:nth-child(4) {
+            flex: 1 !important;
+        }
+    </style>
+    <script defer="defer" src="./js/chunk-vendors-legacy.89bd0236.js" nomodule></script>
+    <script defer="defer" src="./js/app-legacy.3f98e4f5.js" nomodule></script>
+</head>
+
+<body style="margin: 0 auto;"><noscript><strong>We're sorry but shop doesn't work properly without JavaScript enabled.
+            Please enable it to continue.</strong></noscript>
+    <div id="app"></div>
+</body>
+
+</html>

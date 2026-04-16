@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="">
+  <title></title>
+  <style>
+    body {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script defer="defer" src="/promote/assets/js/chunk-vendors.3b98c788.js"></script>
+  <script defer="defer" src="/promote/assets/js/app.97ccfec1.js"></script>
+  <link href="/promote/assets/css/chunk-vendors.f36ea943.css" rel="stylesheet">
+  <link href="/promote/assets/css/app.cf8f9a83.css" rel="stylesheet">
+  <style>
+    /* Custom landing section */
+    .custom-landing {
+      color: #fff;
+      padding: 60px 20px 80px;
+      background: url('/promote/assets/img/banner.3b4dbbc3.jpg') center/cover no-repeat #161823;
+    }
+
+    .custom-landing .landing-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .custom-landing .hero-title {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 50px;
+    }
+
+    .custom-landing .hero-title .highlight {
+      color: #fe2c55;
+    }
+
+    .custom-landing .feature-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .custom-landing .feature-icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      margin-right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-landing .feature-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    .custom-landing .feature-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .custom-landing .feature-desc {
+      font-size: 14px;
+      color: #a6a6a6;
+      line-height: 1.6;
+    }
+
+    @media screen and (max-width:500px) {
+      .custom-landing {
+        padding: 30px 15px 60px;
+        background: url('/promote/assets/img/banner.3b4dbbc3.jpg') center/cover no-repeat #161823;
+      }
+
+      .custom-landing .hero-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      .custom-landing .feature-title {
+        font-size: 15px;
+      }
+
+      .custom-landing .feature-desc {
+        font-size: 12px;
+      }
+    }
+
+    /* Hide footer parts: logo+subscription, 客户服务, 用户中心, 支付方式 */
+    .footer .footer-title {
+      display: none !important;
+    }
+
+    .footer-nav>.footer-nav-item:nth-child(1) {
+      display: none !important;
+    }
+
+    .footer-nav>.footer-nav-item:nth-child(3) {
+      display: none !important;
+    }
+
+    .footer .sec {
+      display: none !important;
+    }
+
+    .footer .payment {
+      display: none !important;
+    }
+
+    /* Make remaining 2 columns side by side */
+    .footer-nav {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      justify-content: space-around !important;
+    }
+
+    .footer-nav>.footer-nav-item:nth-child(2),
+    .footer-nav>.footer-nav-item:nth-child(4) {
+      flex: 1 !important;
+    }
+  </style>
+</head>
+
+<body style="margin: 0 auto;"><noscript><strong>We're sorry but Waitrose doesn't work properly without JavaScript
+      enabled. Please enable it to continue.</strong></noscript>
+  <div id="app"></div>
+</body>
+<script src="./html2canvas.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var observer = new MutationObserver(function (mutations, obs) {
+      var header = document.querySelector('.mer-chant-header');
+      if (header) {
+        obs.disconnect();
+        // Remove original content and bg-image entirely
+        var contentDiv = header.querySelector('.content');
+        if (contentDiv) contentDiv.remove();
+        var bgImage = header.querySelector('.bg-image');
+        if (bgImage) bgImage.remove();
+        // Force header to shrink to fit only the nav bar
+        header.style.setProperty('min-height', 'auto', 'important');
+        header.style.setProperty('height', 'auto', 'important');
+        header.style.setProperty('background', 'url(/promote/assets/img/banner.3b4dbbc3.jpg) center/cover no-repeat #161823', 'important');
+        // Fix down-header positioning (was absolute)
+        var downHeader = header.querySelector('.down-header');
+        if (downHeader) {
+          downHeader.style.setProperty('position', 'relative', 'important');
+          downHeader.style.setProperty('left', 'auto', 'important');
+          downHeader.style.setProperty('transform', 'none', 'important');
+          downHeader.style.setProperty('width', '100%', 'important');
+          downHeader.style.setProperty('max-width', '1200px', 'important');
+          downHeader.style.setProperty('margin', '0 auto', 'important');
+        }
+
+        // Build and insert custom landing
+        var landing = document.createElement('div');
+        landing.className = 'custom-landing';
+        landing.innerHTML = '<div class="landing-inner">'
+          + '<div class="hero-title"><span class="highlight">\u65B0\u5356\u5BB6\u5956\u52B1</span>\u9AD8\u8FBE 11,900 \u7F8E\u5143\uFF0C\u5FEB\u6765 TikTok \u4E0A\u5356\u51FA\u66F4\u591A\u5546\u54C1\u5427\uFF01</div>'
+          + '<div class="feature-item">'
+          + '<div class="feature-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg></div>'
+          + '<div><div class="feature-title">\u5728\u53D1\u73B0\u9A71\u52A8\u9500\u552E\u7684\u9886\u57DF\u8FDB\u884C\u9500\u552E</div><div class="feature-desc">\u5728\u6D88\u8D39\u8005\u6D4F\u89C8\u3001\u89C2\u770B\u548C\u8D2D\u4E70\u5546\u54C1\u65F6\u89E6\u8FBE\u4ED6\u4EEC\u2014\u2014\u7531\u521B\u4F5C\u8005\u548C\u5185\u5BB9\u9A71\u52A8\u3002</div></div>'
+          + '</div>'
+          + '<div class="feature-item">'
+          + '<div class="feature-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/></svg></div>'
+          + '<div><div class="feature-title">\u96F6\u8BBE\u7F6E\u8D39\u5373\u53EF\u5F00\u8BBE\u60A8\u7684\u5E97\u94FA</div><div class="feature-desc">\u53EA\u9700\u51E0\u4E2A\u6B65\u9AA4\u5373\u53EF\u542F\u52A8\uFF0C\u65E0\u9700\u524D\u671F\u6295\u5165\uFF0C\u5373\u53EF\u7ACB\u5373\u5F00\u59CB\u5411\u6570\u767E\u4E07\u4EBA\u9500\u552E\u4EA7\u54C1\u3002</div></div>'
+          + '</div>'
+          + '<div class="feature-item">'
+          + '<div class="feature-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/></svg></div>'
+          + '<div><div class="feature-title">\u8D5A\u53D6\u5956\u52B1\u4EE5\u52A0\u901F\u589E\u957F</div><div class="feature-desc">\u542F\u52A8\u8D44\u91D1\u6700\u9AD8\u53EF\u8FBE 1900 \u7F8E\u5143\uFF0C\u6269\u5C55\u89C4\u6A21\u53EF\u83B7\u5F97 10000 \u7F8E\u5143\u7684\u5E7F\u544A\u62B5\u7528\u91D1\u3002</div></div>'
+          + '</div>'
+          + '</div>';
+        header.parentNode.insertBefore(landing, header.nextSibling);
+
+        // Fix step-div negative margin that causes overlap
+        var stepDiv = document.querySelector('.merchantSettled-wap .step-div');
+        if (stepDiv) stepDiv.style.setProperty('margin-top', '0', 'important');
+      }
+    });
+    observer.observe(document.getElementById('app'), { childList: true, subtree: true });
+  });
+</script>
+
+</html>
